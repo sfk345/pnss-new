@@ -6,6 +6,7 @@
 if (!app()->auth::check()):
    ?>
    <form method="post">
+       <input name="csrf_token" type="hidden" value="<?= app()->auth::generateCSRF() ?>"/>
        <label>Имя <input type="text" name="Name"></label>
        <label>Пароль <input type="password" name="Password"></label>
        <button>Войти</button>
@@ -22,7 +23,7 @@ form{
    display: flex;
    flex-direction: column;
    gap: 15px;
-   padding: 30px 0;
+   /*padding: 30px 0;*/
    background: antiquewhite;
    padding: 40px;
    margin-top: 30px;
