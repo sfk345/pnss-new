@@ -18,6 +18,8 @@ return [
    ],
    'validators' => [
        'required' => \Validators\RequireValidator::class,
-       'unique' => \Validators\UniqueValidator::class
+       'unique' => \Validators\UniqueValidator::class,
+       'password' => \Validators\PasswordValidator::class,
+//       'unique' => \Validators\UniqueValidator::class,
    ]
 ];
